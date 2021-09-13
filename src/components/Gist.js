@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Gist.css';
 const Gist = ({ gist }) => {
 
+    // Logic for number of files and respective string
     let filesLength = Object.keys(gist.files).length;
     let filesString = 'No Files';
 
@@ -45,7 +46,7 @@ const Gist = ({ gist }) => {
            <div className="all-files">
                {
                    gist.files && Object.values( gist.files).map( (file) => {
-                       return <div key={file.file_name}><a href={file.raw_url}>{file.filename}</a></div>
+                       return <div key={file.filename}><a href={file.raw_url}>{file.filename}</a></div>
                    })
                }
            </div>

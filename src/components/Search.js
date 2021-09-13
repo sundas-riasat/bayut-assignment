@@ -8,6 +8,7 @@ import { dataService } from '../services/dataService';
 const Search = () => {
   const [ username, setUsername ] = useState('');
 
+  // Function to get gists based on username
   const getGists = () => {
     if(username !== ""){
       getGistForUser(username).then( response => {
@@ -21,6 +22,8 @@ const Search = () => {
       });
     }
   }
+
+  // To make sure gists are loaded initially
   useEffect(()=>{
     getGists();
   })

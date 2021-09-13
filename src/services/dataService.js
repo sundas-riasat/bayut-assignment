@@ -2,6 +2,7 @@ import { Subject } from 'rxjs';
 
 const subject = new Subject();
 
+// Service to share and persist data between components
 export const dataService = {
     setData: d => subject.next({ value: d }),
     clearData: () => subject.next(),
