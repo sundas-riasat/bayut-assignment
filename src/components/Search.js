@@ -6,20 +6,18 @@ import { dataService } from '../services/dataService';
 
 
 const Search = () => {
-  const [ username, setUsername ] = useState('choco-bot');
+  const [ username, setUsername ] = useState('');
 
   const getGists = () => {
     if(username !== ""){
       getGistForUser(username).then( response => {
         dataService.setData(response.data);
       }).catch( error => {
-
       })
     } else {
       getPublicGists().then( response => {
         dataService.setData(response.data);
       }).catch(error => {
-  
       });
     }
   }

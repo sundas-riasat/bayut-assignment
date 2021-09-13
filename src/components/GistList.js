@@ -12,11 +12,14 @@ const GistList = (  ) => {
 
     return (
         <div>
-             {
+            {
                 gists && gists.map( (gist, i) => {
                     return <Gist gist={gist} id={i}></Gist>
                  })
-            } 
+            }
+            {
+                gists.length <= 0 && <div><h1>No data found for this user. Try another username.</h1></div>
+            }
         </div>
     )
 }
