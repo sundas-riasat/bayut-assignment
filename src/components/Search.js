@@ -14,11 +14,13 @@ const Search = () => {
       getGistForUser(username).then( response => {
         dataService.setData(response.data);
       }).catch( error => {
+        
       })
     } else {
       getPublicGists().then( response => {
         dataService.setData(response.data);
       }).catch(error => {
+        
       });
     }
   }
