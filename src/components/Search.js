@@ -34,7 +34,7 @@ const Search = () => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="search">
       <InputBox>
       <Octicon name="search" />
         <Input placeholder="Search Gists for the username" value={username} onChange={handleUsernameChange}/>

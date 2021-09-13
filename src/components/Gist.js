@@ -12,7 +12,7 @@ const Gist = ({ gist }) => {
         filesString = filesLength + ' Files';
     }
     return(
-        <div className="gist">
+        <div className="gist" data-testid="gist">
            <div className="top-nav">
                <div className="title">
                     <a href={gist.owner.html_url} target="blank">
